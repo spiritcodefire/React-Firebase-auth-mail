@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import Layout from '../Layout/Layout'
 
 const Landing = () => {
 
@@ -30,9 +31,13 @@ const Landing = () => {
     )
 
     return (
-        <main ref={refWolverine} className="welcomePage">
-            { displayBtn }
-        </main>
+        <>
+        <Layout header footer>
+            <main ref={refWolverine} className="welcomePage">
+                { displayBtn }
+            </main>
+        </Layout>
+        </>
     )
 }
 

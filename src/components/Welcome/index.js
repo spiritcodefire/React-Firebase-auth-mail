@@ -20,6 +20,7 @@ const Welcome = props => {
 
         // si userSession est different de null alors =>
         if (!!userSession) {
+            console.log(userSession.uid);
             firebase.user(userSession.uid)
             .get()
             .then( doc => {
@@ -48,7 +49,7 @@ const Welcome = props => {
         <div className="quiz-bg">
             <div className="container">
                 <Logout />
-                <Quiz userData={userData}/>
+                <Quiz userData={userData} userSession={userSession} />
             </div>
         </div>
     )

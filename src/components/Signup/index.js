@@ -24,8 +24,12 @@ const Signup = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         const { email, password, pseudo } = loginData;
+
         firebase.signupUser(email, password)
+        
+        
         .then( authUser => {
+            //ci dessous permet d'envoyer le pseudo
             return firebase.user(authUser.user.uid).set({
                 pseudo,
                 email

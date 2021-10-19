@@ -13,6 +13,8 @@ const config = {
     measurementId: "G-YYPJ8Y9LBN"
 };
 
+
+
 class Firebase {
     constructor() {
         app.initializeApp(config);
