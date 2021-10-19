@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Test = () => {
+const Particuliers = () => {
     return (
         <div className="h1 text-dark">
-            /test ok 
+            /particulier ok 
         </div>
     )
 }
 
-export default Test
+export default Particuliers
