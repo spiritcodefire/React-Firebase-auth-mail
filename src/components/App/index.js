@@ -25,7 +25,7 @@ function App() {
           <Route path="/signup" component={CreateUserVerifEmaill} />
           <Route path="/forgetpassword" component={ForgetPassword} />
           <Route path="/email" component={CreateUserVerifEmaill} />
-          <Route path="/particuliers" children={<ParticulierRooter/>} />
+          <Route path="/particuliers/*" element={ParticulierRooter} />
           <Route component={ErrorPage} />
         </Switch>
 
