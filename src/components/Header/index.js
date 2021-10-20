@@ -1,5 +1,5 @@
 import React from 'react'
-import NavbarGeneral from '../NavbarGeneral/NavbarGeneral'
+import NavbarGeneral from '../Navbars/NavbarSchema'
 
 const Header = () => {
     return (

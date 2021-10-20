@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
-import Layout from "../Layout/Layout"
+import Layout from "../Layouts/LayoutSchema"
 
 const Login = (props) => {
 

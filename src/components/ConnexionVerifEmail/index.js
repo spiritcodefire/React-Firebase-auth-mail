@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { FirebaseContext } from '../Firebase/';
-
+import Layout from '../Layouts/LayoutSchema';
 
 const Index = (props) => {
     const firebase = useContext(FirebaseContext);
@@ -31,22 +31,24 @@ const Index = (props) => {
       
     
     return (
-      <div className="container">
-        <br/><br/>
-        <input type="email" placeholder="Email" 
-        onChange={(e)=>{setemail(e.target.value)}}>
-        </input>
-        <br/><br/>
-        <input type="password" placeholder="password" 
-        onChange={(e)=>{setpassword(e.target.value)}}>
-        </input>
-        <br/><br/>
-        <input type="text" placeholder="pseudo" 
-        onChange={(e)=>{setPseudo(e.target.value)}}>
-        </input>
-        <br/><br/>
-        <button onClick={signup}>Sign-up</button>
-      </div>
+      <Layout header footer>
+        <div className="container">
+          <br/><br/>
+          <input type="email" placeholder="Email" 
+          onChange={(e)=>{setemail(e.target.value)}}>
+          </input>
+          <br/><br/>
+          <input type="password" placeholder="password" 
+          onChange={(e)=>{setpassword(e.target.value)}}>
+          </input>
+          <br/><br/>
+          <input type="text" placeholder="pseudo" 
+          onChange={(e)=>{setPseudo(e.target.value)}}>
+          </input>
+          <br/><br/>
+          <button onClick={signup}>Sign-up</button>
+        </div>
+      </Layout>
     );
 }
 

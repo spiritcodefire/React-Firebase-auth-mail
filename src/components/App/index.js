@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Landing from '../Landing'
+// import Landing from '../Landing'
 import Welcome from '../Welcome'
 import Login from '../Login'
 import ErrorPage from '../ErrorPage'
@@ -19,6 +19,12 @@ import AporteurAffaire from '../PAGES/ApporteurAffaire/Index'
 import Auditeur from '../PAGES/Auditeur/Index'
 import Databases from "../PAGES/Databases/Index"
 import GestionMateriaux from '../PAGES/GestionMateriaux/Index'
+import StartUpEnergetique from '../PAGES/General/StartUpEnergetique'
+import AccueilGeneral from '../PAGES/General/AccueilPage'
+import ConnectionEmailPhone from '../PAGES/General/ConnectionEmailPhone'
+import BienenueLoginRegister from "../PAGES/General/BienvenueLoginRegister"
+import SignupTel from '../PAGES/General/SignupTelParticulier'
+import DashboardParticulier from "../PAGES/Particuliers/DashboardParticuliers"
 
 function App() {
   return (
@@ -26,12 +32,22 @@ function App() {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
     
         <Switch>
-          <Route exact path="/"  component={Landing} />
+          <Route exact path="/"  component={AccueilGeneral} />
           <Route path="/welcome"  component={Welcome} />
           <Route path="/login"   component={Login} />
           <Route path="/signup"  component={CreateUserVerifEmaill} />
           <Route path="/forgetpassword"  component={ForgetPassword} />
           <Route path="/email"  component={CreateUserVerifEmaill} />
+
+          {/* page Generaliste */}
+
+          <Route path="/StartUpEnergetique" exact component={StartUpEnergetique} />
+          <Route path="/ConnectionEmailPhone" exact component={ConnectionEmailPhone} />
+          <Route path="/BienenueLoginRegister" exact component={BienenueLoginRegister} />
+          <Route path="/SignupTelParticulier" exact component={SignupTel} />
+          <Route path="/DashboardParticulier" exact component={DashboardParticulier} />
+
+
 
           <Route path="/particuliers" exact component={ParticulierRooter} />
           <Route path="/particuliers/test" exact component={Test} /> 

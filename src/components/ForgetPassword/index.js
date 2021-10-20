@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase/';
+import Layout from '../Layouts/LayoutSchema'
 
 
 const ForgetPassword = props => {
@@ -33,46 +34,48 @@ const ForgetPassword = props => {
     const disabled = email === "";
 
     return (
-        <div className="signUpLoginBox">
-            <div className="slContainer">
-                <div className="formBoxLeftForget">
-                </div>
-                <div className="formBoxRight">
-                    <div className="formContent">
+        <Layout header footer>
+            <div className="signUpLoginBox">
+                <div className="slContainer">
+                    <div className="formBoxLeftForget">
+                    </div>
+                    <div className="formBoxRight">
+                        <div className="formContent">
 
-                        { 
-                            success && <span 
-                                style={{ 
-                                border: "1px solid green",
-                                background: "green",
-                                color: "#ffffff"
-                            }}
-                            >
-                                {success}
-                            </span>
-                        }
+                            { 
+                                success && <span 
+                                    style={{ 
+                                    border: "1px solid green",
+                                    background: "green",
+                                    color: "#ffffff"
+                                }}
+                                >
+                                    {success}
+                                </span>
+                            }
 
-                        {error && <span>{error.message}</span>}
+                            {error && <span>{error.message}</span>}
 
-                        <h2>Mot de passe oublié?</h2>
-                        <form onSubmit={handleSubmit}>
+                            <h2>Mot de passe oublié?</h2>
+                            <form onSubmit={handleSubmit}>
 
-                            <div className="inputBox">
-                                <input onChange={e => setEmail(e.target.value)} value={email} type="email" autoComplete="off" required />
-                                <label htmlFor="email">Email</label>
+                                <div className="inputBox">
+                                    <input onChange={e => setEmail(e.target.value)} value={email} type="email" autoComplete="off" required />
+                                    <label htmlFor="email">Email</label>
+                                </div>
+
+                                <button disabled={disabled}>Récupérer</button>
+
+                            </form>
+
+                            <div className="linkContainer">
+                                <Link className="simpleLink" to="/login">Déjà inscrit? Connectez-vous.</Link>
                             </div>
-
-                            <button disabled={disabled}>Récupérer</button>
-
-                        </form>
-
-                        <div className="linkContainer">
-                            <Link className="simpleLink" to="/login">Déjà inscrit? Connectez-vous.</Link>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

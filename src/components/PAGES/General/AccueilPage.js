@@ -1,15 +1,9 @@
 import React from 'react'
-// import Layout from '../Layout/Layout'
-// import Button from 'react-bootstrap/Button'
-// import Stack from 'react-bootstrap/Stack'
- import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Landing = () => {
-
+const AccueilPage = () => {
     return (
-        <>
-        {/* <Layout> */}
-        <Link className="text-decoration-none text-dark" to="/test">
+        <Link className="text-decoration-none text-dark" to="/StartUpEnergetique">
             <div  className=" bg-success bg-gradient m-0 p-0" style={{height: '100vh', width: "100wh", display: "flex ", alignItems: "center"}} >
               
                 <div className="col  bg-light" style={{flex: 1, height: 200}}>
@@ -20,9 +14,7 @@ const Landing = () => {
                 
             </div>
         </Link>
-        {/* </Layout> */}
-        </>
     )
 }
 
-export default Landing
+export default AccueilPage
