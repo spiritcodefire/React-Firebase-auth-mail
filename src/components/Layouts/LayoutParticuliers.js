@@ -5,17 +5,12 @@ import Footer from "../Footer/index"
 const LayoutParticuliers = ({children, footer, header}) => {
     return (
         <>
-        
-            {header && 
-               <Header /> 
-            }
+
+            {header && <Header /> }
             
             {children}
 
-
-            {footer && 
-                < Footer />
-            }
+            {footer && < Footer /> }
             
         </>
     )

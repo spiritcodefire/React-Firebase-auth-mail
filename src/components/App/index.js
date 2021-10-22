@@ -34,25 +34,24 @@ function App() {
         <Switch>
           <Route exact path="/"  component={AccueilGeneral} />
           <Route path="/welcome"  component={Welcome} />
+
+          {/* Authentification */}
           <Route path="/login"   component={Login} />
           <Route path="/signup"  component={CreateUserVerifEmaill} />
           <Route path="/forgetpassword"  component={ForgetPassword} />
           <Route path="/email"  component={CreateUserVerifEmaill} />
 
           {/* page Generaliste */}
-
           <Route path="/StartUpEnergetique" exact component={StartUpEnergetique} />
           <Route path="/ConnectionEmailPhone" exact component={ConnectionEmailPhone} />
           <Route path="/BienenueLoginRegister" exact component={BienenueLoginRegister} />
           <Route path="/SignupTelParticulier" exact component={SignupTel} />
           <Route path="/DashboardParticulier" exact component={DashboardParticulier} />
 
-
-
+          {/* Page Description */}
+          <Route path="/artisans" exact component={Artisans} /> 
           <Route path="/particuliers" exact component={ParticulierRooter} />
           <Route path="/particuliers/test" exact component={Test} /> 
-
-          <Route path="/artisans" exact component={Artisans} /> 
           <Route path="/admin" exact component={Admin} /> 
           <Route path="/superAdmin" exact component={SuperAdmin} /> 
           <Route path="/administration" exact component={Administration} /> 
